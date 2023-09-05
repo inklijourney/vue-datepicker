@@ -31,6 +31,7 @@ module.exports = {
     '@typescript-eslint',
     'vue',
   ],
+  ignorePatterns: ['index.html'],
   rules: {
     'antfu/top-level-function': 'off',
     'no-console': 'off',
