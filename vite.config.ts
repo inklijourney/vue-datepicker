@@ -11,7 +11,9 @@ import dts from 'vite-plugin-dts'
 export default defineConfig({
   plugins: [
     vue(),
-    dts(),
+    dts({
+      rollupTypes: true,
+    }),
     AutoImport({
       imports: ['vue'],
       dts: './auto-imports.d.ts',
@@ -36,10 +38,8 @@ export default defineConfig({
   },
   build: {
     lib: {
-      // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'vue-datepicker',
-      // the proper extensions will be added
+      name: 'VueDatePicker',
       fileName: format => `vue-datepicker.${format}.js`,
     },
     rollupOptions: {
@@ -53,4 +53,5 @@ export default defineConfig({
       },
     },
   },
+
 })
