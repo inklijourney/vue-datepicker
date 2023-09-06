@@ -41,7 +41,7 @@ defineExpose({ hide, show, toggleVisible, popoverRef, popperInstance, initPopove
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease;
 }
 
 .v-enter-from,
