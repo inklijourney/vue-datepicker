@@ -64,7 +64,7 @@ onMounted(() => {
   </div>
   <div class="grid grid-cols-7 group">
     <div
-      v-for="date in dateRange" :key="date.toDate().toString"
+      v-for="(date, index) in dateRange" :key="index"
       class="flex justify-center items-center"
       @click="clickDay(date.toDate())"
     >
